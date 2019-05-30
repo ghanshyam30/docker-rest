@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+ docker-rest:
+  build:
+   context: .
+  ports:
+   - "8001:5000"
+  volumes:
+   - ".:/docker-rest"
+  command:
+    tail -f Dockerfile
